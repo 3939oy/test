@@ -1,0 +1,278 @@
+*:focus {
+    outline: none;
+}
+
+body{
+    line-height: 1.6;
+}
+
+h1,h2{
+    font-weight: 400;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p,input[name='submit']{
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+header{
+    width: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0px 9px 10px -10px rgba(0,0,0,0.6);
+}
+
+nav ul{
+    height: 60px;
+    float: right;
+    list-style: none;
+    overflow: hidden;
+    padding: 11px 0;
+    padding-right: 60px;
+}
+
+nav ul li{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+    letter-spacing: 0.050em;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    border-bottom: solid 2px #b2a775;
+}
+
+
+nav ul li:not(:last-child) {
+    margin-right: 24px;
+}
+
+.hero{
+    padding-top: 60px;
+    position: relative;
+}
+
+.hero h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-family: Monotype Corsiva, fantasy;
+    letter-spacing: 0.050em;
+}
+
+.hero-cover{
+    background-color: #ffffff;
+    opacity: 0.8;
+}
+
+.hero-background{
+    height: 600px;
+    background-image: url(../img/cup-of-coffee.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.section-profile{
+    height: 500px;
+}
+
+.section-title{
+    font-size: 40px;
+    letter-spacing: 0.050em;
+    padding-top: 35px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.section-title span{
+    display: inline-block;
+    width: 200px;
+    border-bottom: solid 2px #b2a775;
+}
+
+.profile-box{
+    position: relative;
+    margin-top: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    width: 700px;
+    height: 300px;
+    background-color: #000000;
+    opacity: 0.8;
+}
+
+.icon-circle{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    transform: translate(-10%, -20%);
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-circle img{
+    width: 100%;
+    border-radius: 1000px;    
+}
+
+
+.section-works{
+    height: 500px;
+    background-color: #f8f8f8;
+}
+
+.multiple-items{
+    width: 786px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.multiple-items li{
+    background-color: #ffffff;
+    min-width: 250px;
+    height: 200px;
+
+    box-shadow: 0 3px 7px rgba(0,0,0,0.4);
+    list-style: none;
+    transition: all 0.3s;
+}
+
+.multiple-items li:hover{
+    transform: translateY(-5px);
+}
+
+.multiple-items li:not(:nth-of-type(3n)){
+    margin-right: 18px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+button{
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    appearance: none;
+}
+
+.slide-arrow{
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+}
+
+.prev-arrow{
+    left: -40px;
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 15px solid #000000;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.next-arrow{
+    right: -40px;
+    width: 0;
+    height: 0;
+    border-right: 0 solid transparent;
+    border-left: 15px solid #000000;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+  
+.section-contact{
+    height: 750px;
+}
+
+.form-contact{
+    background-color: #ffffff;
+    width: 400px;
+    height: 550px;
+    margin: 0 auto;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.4);
+}
+
+form p{
+    margin-left: 50px;
+    width: 200px;
+    color: #555555;
+    padding-top: 28px;
+    padding-bottom: 6px;
+}
+
+input{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[name="username"] ,input[name="email"]{
+    display: block;
+    height: 40px;
+    width: 300px;
+    border: solid 1px #cccccc;
+}
+
+textarea[name="text"]{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 28px;
+    width: 300px;
+    height: 150px;
+    max-height: 200px;
+    border: solid 1px #cccccc;
+}
+
+input[name="submit"]{
+    display: block;
+    width: 60px;
+    height: 30px;
+    border: solid 1px #cccccc;
+}
+
+.form-submit:hover{
+    cursor: pointer;
+}
+.form-submit:disabled {
+    cursor: not-allowed;
+}
+
+footer{
+    height: 60px;
+    background-color: #f8f8f8;
+    position: relative;
+}
+
+footer small{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 750px){
+    .profile-box{
+        width: 600px;
+    }
+    .multiple-items{
+        width: 518px;    
+    }    
+
+}
