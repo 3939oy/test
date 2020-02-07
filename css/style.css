@@ -8,10 +8,17 @@ body{
 
 h1,h2{
     font-weight: 400;
+    letter-spacing: 0.050em;
 }
 
 h2{
     font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+h1{
+    font-size: 48px;
+    font-family: Monotype Corsiva, fantasy;
 }
 
 p,input[name='submit']{
@@ -26,6 +33,7 @@ header{
     z-index: 1;
     box-shadow: 0px 9px 10px -10px rgba(0,0,0,0.6);
 }
+
 
 nav ul{
     height: 60px;
@@ -64,9 +72,6 @@ nav ul li:not(:last-child) {
     left: 50%;
     color: #ffffff;
     transform: translate(-50%, -50%);
-    font-size: 48px;
-    font-family: Monotype Corsiva, fantasy;
-    letter-spacing: 0.050em;
 }
 
 .hero-cover{
@@ -76,18 +81,17 @@ nav ul li:not(:last-child) {
 
 .hero-background{
     height: 600px;
+    width: 100vw;
     background-image: url(../img/cup-of-coffee.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
 
 .section-profile{
-    height: 500px;
+    height: 600px;
 }
 
 .section-title{
-    font-size: 40px;
-    letter-spacing: 0.050em;
     padding-top: 35px;
     text-align: center;
     margin-bottom: 28px;
@@ -100,32 +104,32 @@ nav ul li:not(:last-child) {
 }
 
 .profile-box{
-    position: relative;
-    margin-top: 28px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     border-radius: 50px;
     width: 700px;
-    height: 300px;
+    height: 400px;
     background-color: #000000;
     opacity: 0.8;
+    overflow: hidden;
+    color: #ffffff;
+    text-align: center;
 }
 
 .icon-circle{
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    transform: translate(-10%, -20%);
-    display: inline-block;
+    margin: 20px auto;
     width: 100px;
     height: 100px;
 }
 
 .icon-circle img{
     width: 100%;
-    border-radius: 1000px;    
+    border-radius: 50%;    
 }
 
+.text-name{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
 
 .section-works{
     height: 500px;
@@ -134,16 +138,13 @@ nav ul li:not(:last-child) {
 
 .multiple-items{
     width: 786px;
-    margin-left: auto;
-    margin-right: auto;    
+    margin: 0 auto;
 }
 
 .multiple-items li{
     background-color: #ffffff;
     min-width: 250px;
     height: 200px;
-
-    box-shadow: 0 3px 7px rgba(0,0,0,0.4);
     list-style: none;
     transition: all 0.3s;
 }
@@ -204,7 +205,7 @@ button{
 .form-contact{
     background-color: #ffffff;
     width: 400px;
-    height: 550px;
+    height: 500px;
     margin: 0 auto;
     box-shadow: 0 3px 7px rgba(0,0,0,0.4);
 }
@@ -235,8 +236,7 @@ textarea[name="text"]{
     margin-right: auto;
     margin-bottom: 28px;
     width: 300px;
-    height: 150px;
-    max-height: 200px;
+    max-height: 150px;
     border: solid 1px #cccccc;
 }
 
@@ -268,11 +268,40 @@ footer small{
 }
 
 @media screen and (max-width: 750px){
+    h1{
+        text-align: center;
+        width: 300px;
+    }
+    h2{
+        font-size: 28px;
+    }
+
+    nav ul li{
+        display: none;
+    }
     .profile-box{
-        width: 600px;
+        width: 90%;
+    }
+
+    .text-box{
+        width: 80%;
+        margin: 0 auto;
     }
     .multiple-items{
-        width: 518px;    
+        width: 250px;    
+    }
+    .multiple-items li{
+        margin: 0;
     }    
-
+    .form-contact{
+        background-color: #ffffff;
+        width: 80%;
+    }
+    input[name="username"] ,input[name="email"]{
+        width: 70%;
+    }
+    
+    textarea[name="text"]{
+        width: 70%;
+    }
 }
