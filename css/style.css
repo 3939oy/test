@@ -7,18 +7,19 @@ body{
 }
 
 h1,h2{
-    font-weight: 400;
     letter-spacing: 0.050em;
 }
 
 h2{
+    font-weight: 400;
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
 }
 
 h1{
+    font-weight: 600;
     font-size: 48px;
-    font-family: Monotype Corsiva, fantasy;
+    font-family: 'Josefin Slab', serif;
 }
 
 p,input[name='submit']{
@@ -36,19 +37,29 @@ header{
 
 
 nav ul{
+    display: flex; 
+    align-items: center;
     height: 60px;
-    float: right;
     list-style: none;
     overflow: hidden;
-    padding: 11px 0;
-    padding-right: 60px;
+    float: right;
+}
+
+nav ul::after{
+    display: block;
+    content: "";
+    float: left;
+    padding-right: 20px;
 }
 
 nav ul li{
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-    float: left;
     letter-spacing: 0.050em;
+}
+
+main{
+    padding-top: 60px;
 }
 
 nav ul li:hover{
@@ -58,11 +69,10 @@ nav ul li:hover{
 
 
 nav ul li:not(:last-child) {
-    margin-right: 24px;
+    margin-right: 10px;
 }
 
 .hero{
-    padding-top: 60px;
     position: relative;
 }
 
@@ -80,11 +90,9 @@ nav ul li:not(:last-child) {
 }
 
 .hero-background{
-    height: 600px;
-    width: 100vw;
+    padding-top: 58.59375%;
+    background-size: contain;
     background-image: url(../img/cup-of-coffee.jpg);
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 .section-profile{
@@ -132,7 +140,7 @@ nav ul li:not(:last-child) {
 }
 
 .section-works{
-    height: 500px;
+    height: 400px;
     background-color: #f8f8f8;
 }
 
@@ -143,7 +151,7 @@ nav ul li:not(:last-child) {
 
 .multiple-items li{
     background-color: #ffffff;
-    min-width: 250px;
+    width: 250px;
     height: 200px;
     list-style: none;
     transition: all 0.3s;
@@ -151,6 +159,8 @@ nav ul li:not(:last-child) {
 
 .multiple-items li:hover{
     transform: translateY(-5px);
+    box-shadow: 0 3px 7px rgba(0,0,0,0.4);
+
 }
 
 .multiple-items li:not(:nth-of-type(3n)){
@@ -211,8 +221,8 @@ button{
 }
 
 form p{
-    margin-left: 50px;
-    width: 200px;
+    margin: 0 auto;
+    width: 300px;
     color: #555555;
     padding-top: 28px;
     padding-bottom: 6px;
@@ -267,41 +277,56 @@ footer small{
     transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 750px){
-    h1{
-        text-align: center;
-        width: 300px;
+@media screen and (max-width: 1023px){
+
+    .multiple-items{
+        width: 518px;    
     }
-    h2{
-        font-size: 28px;
+    .multiple-items li:not(:nth-of-type(2n)){
+        margin-right: 18px;
+    }
+}
+
+@media screen and (max-width: 749px){
+    h1,h2{
+        font-size: 24px;
     }
 
     nav ul li{
-        display: none;
+        font-size: 16px;
     }
+
     .profile-box{
-        width: 90%;
+        width: 90vw;
     }
 
     .text-box{
-        width: 80%;
+        width: 80vw;
         margin: 0 auto;
     }
+    
     .multiple-items{
-        width: 250px;    
+        width: 200px;    
     }
+
     .multiple-items li{
         margin: 0;
+        width: 200px;
     }    
     .form-contact{
         background-color: #ffffff;
-        width: 80%;
+        width: 75vw;
     }
+
+    form p{
+        width: 60vw;   
+    }
+
     input[name="username"] ,input[name="email"]{
-        width: 70%;
+        width: 60vw;
     }
     
     textarea[name="text"]{
-        width: 70%;
+        width: 60vw;
     }
 }

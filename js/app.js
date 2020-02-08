@@ -10,7 +10,13 @@ $(function(){
         slidesToScroll: 3,
         responsive: [
           {
-            breakpoint: 750,
+            breakpoint: 1023,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },{           
+            breakpoint: 749,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1
